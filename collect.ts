@@ -39,6 +39,18 @@ async function main() {
         last_check_time: Date.now(),
       })
     }
+    await page.locator(`[data-banner="SiteLogoComponent"]`).hover()
+    await page
+      .locator(`pns-header-navigation-tab-menu a[href="/en/${category.slug}"]`)
+      .hover()
+    await page.waitForSelector('.navSubmenu ul li a')
+    let links = await page.evaluate(function () {
+      let links = document.querySelectorAll<HTMLAnchorElement>(
+        '.navSubmenu ul li a',
+      )
+      return Array.from(links).map(link => link.href)
+    })
+    console.log('links:', links)
   }
 }
 
