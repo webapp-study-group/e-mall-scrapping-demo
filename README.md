@@ -1,4 +1,5 @@
-# 快速設定資料庫並從網站抓取數據匯入資料庫 - Scraping Demo (e-mall)
+# [示範] 簡易設定資料庫並從網站抓取數據匯入資料庫
+Scraping Demo (e-mall)
 
 Screen Recording: https://youtu.be/E22Xz3jW5lo
 
